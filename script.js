@@ -61,7 +61,7 @@
     const scrollChanges = [
       { y: 0, miles: 893, days: 17, states: 3, note: "2025" },      // at top
       { y: 600, miles: 2094, days: 32, states: 6, note: "all time" },   // after 500px scroll
-      { y: 1150, miles: 1201, days: 15, states: 3, note: "2016" }   // after 1000px scroll
+      { y: 1150, miles: 1211, days: 15, states: 3, note: "2016" }   // after 1000px scroll
     ];
 
     window.addEventListener("scroll", () => {
