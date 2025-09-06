@@ -35,11 +35,11 @@
       fill: #e63946;
     }
 
-    .marker[data-title="Day 17: Waukesha, Wisconsin"] {
+    .marker[data-title="Day 23: Defiance, Ohio"] {
       fill: #ab2069;
     }
 
-    .marker[data-title="Day 17: Waukesha, Wisconsin"]:hover {
+    .marker[data-title="Day 23: Defiance, Ohio"]:hover {
       fill: #e63946;
     }
     .marker[data-title="Day 1: Astoria, Oregon"] {
