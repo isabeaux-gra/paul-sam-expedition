@@ -27,6 +27,7 @@
       border: 1px solid #ccc;
     }
 
+
     .marker {
       cursor: pointer;
       transition: transform 0.2s ease, fill 0.2s ease;

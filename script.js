@@ -82,7 +82,7 @@
 
     const scrollChanges = [
       { y: 0, miles: "1800+", days: 32, states: 9, note: "2025" },      // at top
-      { y: 500, miles: "3300+", days: 47, states: 12, note: "all time" },   // after 500px scroll
+      { y: 500, miles: "4000+", days: 55, states: 13, note: "all time" },   // after 500px scroll
       { y: 1500, miles: 1211, days: 15, states: 3, note: "2016" }   // after 1000px scroll
     ];
 
