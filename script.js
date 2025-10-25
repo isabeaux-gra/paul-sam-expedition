@@ -1,5 +1,5 @@
     const tooltip = document.getElementById("tooltip");
-    const markers = document.querySelectorAll(".marker");
+    const hoverables = document.querySelectorAll(".marker, .hover-line");
     let activeMarker = null;
 
     // show tooltip
@@ -21,32 +21,32 @@
       }
     }
 
-    markers.forEach(marker => {
+    hoverables.forEach(el => {
       // Desktop: hover events
-      marker.addEventListener("mouseenter", (e) => {
+      el.addEventListener("mouseenter", (e) => {
         if (window.innerWidth > 768) {
-          showTooltip(marker, e);
+          showTooltip(el, e);
         }
       });
       
-      marker.addEventListener("mouseleave", () => {
+      el.addEventListener("mouseleave", () => {
         if (window.innerWidth > 768) {
           hideTooltip();
         }
       });
 
       // Mobile/Desktop: click events
-      marker.addEventListener("click", (e) => {
+      el.addEventListener("click", (e) => {
         e.stopPropagation();
-        if (activeMarker === marker) {
+        if (activeMarker === el) {
           hideTooltip();
         } else {
           hideTooltip();
-          showTooltip(marker, e);
+          showTooltip(el, e);
         }
       });
-      marker.addEventListener("mousemove", (e) => {
-        if (activeMarker === marker) {
+      el.addEventListener("mousemove", (e) => {
+        if (activeMarker === el) {
           const tooltipRect = tooltip.getBoundingClientRect();
           const padding = 10; // distance from cursor
           let left = e.pageX + padding;
@@ -69,6 +69,7 @@
 
     });
 
+
     // hide tooltip when click elsewhere
     document.addEventListener("click", () => {
       hideTooltip();
@@ -81,9 +82,9 @@
 
 
     const scrollChanges = [
-      { y: 0, miles: "1800+", days: 32, states: 9, note: "2025" },      // at top
-      { y: 500, miles: "4000+", days: 55, states: 13, note: "all time" },   // after 500px scroll
-      { y: 1500, miles: 1211, days: 15, states: 3, note: "2016" }   // after 1000px scroll
+      { y: 0, miles: 1906, days: 32, states: 9, note: "2025" },      // at top
+      { y: 500, miles: 4106, days: 55, states: 13, note: "all time" },   // after 500px scroll
+      { y: 1700, miles: 1211, days: 15, states: 3, note: "2016" }   // after 1000px scroll
     ];
 
     window.addEventListener("scroll", () => {

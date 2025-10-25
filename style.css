@@ -27,6 +27,33 @@
       border: 1px solid #ccc;
     }
 
+    .map-embed {
+      position: relative;
+      width: 100%;
+      padding-bottom: 47%; /* 480/1020 = 0.47, keeps same aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .map-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .base-map {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .vector-overlay path {
+      position: absolute;
+/*      pointer-events: none;*/
+    }
 
     .marker {
       cursor: pointer;
@@ -44,11 +71,20 @@
       fill: #000000;
     }
     .marker[data-title="Day 1: Astoria, Oregon"] {
-      fill: #e63946;
+      fill: #243761;
     }
 
     .marker[data-title="Day 1: Astoria, Oregon"]:hover {
       fill: #000000;
+    }
+
+    .hover-line {
+      transition: stroke-width 0.2s, stroke 0.2s;
+      cursor: pointer;
+    }
+
+    .hover-line:hover {
+      stroke-width: 3;               /* bolden line on hover */
     }
 
     .tooltip {
