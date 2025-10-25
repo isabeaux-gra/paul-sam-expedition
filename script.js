@@ -69,6 +69,7 @@
 
     });
 
+    
 
     // hide tooltip when click elsewhere
     document.addEventListener("click", () => {

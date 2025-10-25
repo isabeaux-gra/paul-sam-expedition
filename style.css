@@ -50,10 +50,6 @@
       display: block;
     }
 
-    .vector-overlay path {
-      position: absolute;
-/*      pointer-events: none;*/
-    }
 
     .marker {
       cursor: pointer;
