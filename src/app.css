@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .popup {
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .popup-route {
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .popup-date {
+    color: #666;
+  }
+
+  .popup-dist {
+    margin-top: 6px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .popup-dist-number {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .popup-dist-unit {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 4px;
+  }
+
+  .map-wrap {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+
+  .map {
+    position: absolute;
+    inset: 0;
+  }
+
+  .map-ui {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 5;
+  }
+
+  .map-ui button {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /*.map-ui button.active {
+    color: #DC4633;
+    border-color: #DC4633;
+  }*/
+  .map-ui button.active {
+    color: var(--year-color);;
+    border-color: var(--year-color);
+  }
+  .map-overlay {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 5;
+    text-align: right;
+  }
+
+  .map-ui {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+  }
+
+  .stats {
+    display: grid;
+    gap: 10px;
+  }
+
+  .stat-number {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+  }
+
+  /* Desktop stats */
+  .desktop-only {
+    position: absolute;
+    padding: 50px 10px;
+    top: 12px;
+    right: 12px;
+    z-index: 5;
+    text-align: right;
+  }
+
+  /* Mobile stats */
+  .mobile-only {
+    display: none;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .desktop-only { display: none; }
+    .mobile-only { display: block; }
+  }
+
+  @media (max-width: 600px) {
+    .stats.mobile-only {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 12px;
+    }
+
+    .stats.mobile-only .stat {
+      text-align: center;
+    }
+
+    .stats.mobile-only .stat-number {
+      font-size: 30px;
+    }
+
+    .stats.mobile-only .stat-label {
+      font-size: 10px;
+    }
+  }
+
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
