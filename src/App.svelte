@@ -5,6 +5,7 @@ import Map from './components/Map.svelte';
 </script>
 
 <main>
+  <h1>TEST</h1>
   <Navbar />
   <Map />
   <!-- <Graph /> -->
