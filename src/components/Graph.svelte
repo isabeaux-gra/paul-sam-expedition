@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { onMount } from "svelte";
   import { scaleLinear } from "d3-scale";
   import { line as d3Line } from "d3-shape";
@@ -101,3 +101,4 @@
 <div bind:this={container} style="width:100%">
   <svg width="100%" height={chartHeight}></svg>
 </div>
+ -->
